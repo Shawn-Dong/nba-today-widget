@@ -6,14 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C17B120F2F72E715009D4DDB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C17B120E2F72E715009D4DDB /* WidgetKit.framework */; };
+		C17B12112F72E715009D4DDB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C17B12102F72E715009D4DDB /* SwiftUI.framework */; };
+		C17B12202F72E715009D4DDB /* NBATodayExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C17B120C2F72E715009D4DDB /* NBATodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C17B121E2F72E715009D4DDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C17B11DD2F72E4DE009D4DDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C17B120B2F72E715009D4DDB;
+			remoteInfo = NBATodayExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C17B12212F72E715009D4DDB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C17B12202F72E715009D4DDB /* NBATodayExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C17B11E52F72E4DE009D4DDB /* NBAWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C17B120C2F72E715009D4DDB /* NBATodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NBATodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C17B120E2F72E715009D4DDB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C17B12102F72E715009D4DDB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C17B12242F72E715009D4DDB /* Exceptions for "NBAToday" folder in "NBATodayExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C17B120B2F72E715009D4DDB /* NBATodayExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C17B11E72F72E4DE009D4DDB /* NBAWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = NBAWidget;
+			sourceTree = "<group>";
+		};
+		C17B12122F72E715009D4DDB /* NBAToday */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C17B12242F72E715009D4DDB /* Exceptions for "NBAToday" folder in "NBATodayExtension" target */,
+			);
+			path = NBAToday;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C17B12092F72E715009D4DDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C17B12112F72E715009D4DDB /* SwiftUI.framework in Frameworks */,
+				C17B120F2F72E715009D4DDB /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				C17B11E72F72E4DE009D4DDB /* NBAWidget */,
+				C17B12122F72E715009D4DDB /* NBAToday */,
+				C17B120D2F72E715009D4DDB /* Frameworks */,
 				C17B11E62F72E4DE009D4DDB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				C17B11E52F72E4DE009D4DDB /* NBAWidget.app */,
+				C17B120C2F72E715009D4DDB /* NBATodayExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C17B120D2F72E715009D4DDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C17B120E2F72E715009D4DDB /* WidgetKit.framework */,
+				C17B12102F72E715009D4DDB /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +127,12 @@
 				C17B11E12F72E4DE009D4DDB /* Sources */,
 				C17B11E22F72E4DE009D4DDB /* Frameworks */,
 				C17B11E32F72E4DE009D4DDB /* Resources */,
+				C17B12212F72E715009D4DDB /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C17B121F2F72E715009D4DDB /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				C17B11E72F72E4DE009D4DDB /* NBAWidget */,
@@ -69,6 +143,28 @@
 			productName = NBAWidget;
 			productReference = C17B11E52F72E4DE009D4DDB /* NBAWidget.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C17B120B2F72E715009D4DDB /* NBATodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C17B12252F72E715009D4DDB /* Build configuration list for PBXNativeTarget "NBATodayExtension" */;
+			buildPhases = (
+				C17B12082F72E715009D4DDB /* Sources */,
+				C17B12092F72E715009D4DDB /* Frameworks */,
+				C17B120A2F72E715009D4DDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C17B12122F72E715009D4DDB /* NBAToday */,
+			);
+			name = NBATodayExtension;
+			packageProductDependencies = (
+			);
+			productName = NBATodayExtension;
+			productReference = C17B120C2F72E715009D4DDB /* NBATodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +177,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					C17B11E42F72E4DE009D4DDB = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					C17B120B2F72E715009D4DDB = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -100,12 +199,20 @@
 			projectRoot = "";
 			targets = (
 				C17B11E42F72E4DE009D4DDB /* NBAWidget */,
+				C17B120B2F72E715009D4DDB /* NBATodayExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C17B11E32F72E4DE009D4DDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C17B120A2F72E715009D4DDB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +229,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C17B12082F72E715009D4DDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C17B121F2F72E715009D4DDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C17B120B2F72E715009D4DDB /* NBATodayExtension */;
+			targetProxy = C17B121E2F72E715009D4DDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C17B11EE2F72E4DF009D4DDB /* Debug */ = {
@@ -303,6 +425,68 @@
 			};
 			name = Release;
 		};
+		C17B12222F72E715009D4DDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = NBAToday/NBAToday.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NBAToday/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NBAToday;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SD.NBAWidget.NBAToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C17B12232F72E715009D4DDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = NBAToday/NBAToday.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NBAToday/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NBAToday;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SD.NBAWidget.NBAToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -320,6 +504,15 @@
 			buildConfigurations = (
 				C17B11F12F72E4DF009D4DDB /* Debug */,
 				C17B11F22F72E4DF009D4DDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C17B12252F72E715009D4DDB /* Build configuration list for PBXNativeTarget "NBATodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C17B12222F72E715009D4DDB /* Debug */,
+				C17B12232F72E715009D4DDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

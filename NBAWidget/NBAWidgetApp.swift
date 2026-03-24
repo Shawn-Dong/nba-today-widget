@@ -1,11 +1,5 @@
-//
-//  NBAWidgetApp.swift
-//  NBAWidget
-//
-//  Created by dyst on 3/24/26.
-//
-
 import SwiftUI
+import WidgetKit
 
 @main
 struct NBAWidgetApp: App {
